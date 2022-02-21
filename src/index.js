@@ -27,20 +27,8 @@ const renderCalendar = () => {
 
   const nextDays = 7 - lastDayIndex - 1;
 
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  const months =["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
+
 
   document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
