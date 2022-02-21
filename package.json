@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.2.0",
-    "dayjs": "^1.10.7"
+    "dayjs": "^1.10.7",
+    "luxon": "^2.3.0"
   },
   "devDependencies": {
     "prettier": "^2.2.1",
