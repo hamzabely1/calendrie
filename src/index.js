@@ -1,4 +1,9 @@
-const date = new Date();
+
+let ora = document.getElementById("ora")
+let evenement = document.getElementById("evenment")
+let dayh= document.getElementsByClassName("days")
+let input = document.getElementById("input").valeu
+let date = new Date();
 
 const renderCalendar = () => {
   date.setDate(1);
@@ -36,23 +41,25 @@ const renderCalendar = () => {
 
   let days = "";
 
-  for (let x = firstDayIndex; x > 0; x--) {
+  for (let x = firstDayIndex; x > 1; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
   }
 
   for (let i = 1; i <= lastDay; i++) {
     if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
+      i === new Date().getDate()  &&
+      date.getMonth() === new Date().getMonth() 
     ) {
-      days += `<div class="today">${i}</div>`;
+      days += `<div  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="today">${i}</div>`;
     } else {
-      days += `<div>${i}</div>`;
-    }
+      days += `<div data-bs-toggle="modal"  data-bs-target="#exampleModal">${i}</div>`;
+    
+    
+}
   }
 
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date">${j}</div>`;
+    days += `<div  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="next-date" >${j}</div>`;
     monthDays.innerHTML = days;
   }
 };
@@ -68,3 +75,26 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+
+console.log(dayjs());
+
+
+let y = dayjs()
+
+ora.innerHTML = y.$H+":"+y.$m;
+
+let buttonsave = document.getElementById("buttonsave")
+
+buttonsave.addEventListener("click",save)
+
+function save() {
+
+let diveven = document.createElement("div")
+diveven.style.height= "50px"
+diveven.style.width ="500px"
+diveven.style.border="solid black 1px"
+
+evenement.appendChild(diveven)
+}
+
