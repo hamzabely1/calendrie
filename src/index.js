@@ -2,7 +2,7 @@
 let ora = document.getElementById("ora")
 let evenement = document.getElementById("evenment")
 let dayh= document.getElementsByClassName("days")
-let input = document.getElementById("input").valeu
+let input = document.getElementById("input")
 let date = new Date();
 
 const renderCalendar = () => {
@@ -88,13 +88,36 @@ let buttonsave = document.getElementById("buttonsave")
 
 buttonsave.addEventListener("click",save)
 
+
+//
+
 function save() {
 
 let diveven = document.createElement("div")
-diveven.style.height= "50px"
-diveven.style.width ="500px"
-diveven.style.border="solid black 1px"
+let but = document.createElement("button")
+diveven.style.height= "100px"
+diveven.style.width ="400px"
+diveven.style.border="solid orange 5px"
+diveven.style.borderRadius = "10px"
+
+but.style.height ="50px"
+but.style.width ="50px"
+but.style.background ="black"
+let indate = document.getElementById("date")
 
 evenement.appendChild(diveven)
+diveven.appendChild(but)
+localStorage.setItem("text",text.value)
+diveven.innerHTML = localStorage.getItem("text")+"<br>"+localStorage.getItem("date")+"<button id=ferme>x</button>"
+let ferme = document.getElementById("ferme")
+ferme.addEventListener ("click" ,fermi)
+function fermi() {
+  diveven.innerHTML =""
+  diveven.style.border ="solid 0px"
 }
+
+
+}
+
+
 

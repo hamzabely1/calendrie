@@ -24,7 +24,7 @@
     border-radius: 10px;
   }
   .month {
-    width: 500px;
+    width: 498px;
     height: 100px;
     background-color: orange;
     display: flex;
@@ -85,11 +85,11 @@
     align-items: center;
     transition: background-color 0.2s;
     color: black;
-    border: solid black;
+    border: solid black 1px;
     border-radius: 10px;
   }
   .days div:hover:not(.today) {
-    background-color: orangered;
+    background-color: orange;
     border: 0.2rem solid #777;
     cursor: pointer;
   }
@@ -128,5 +128,21 @@
 
 #evenment {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+#text{
+  border: transparent;
+  height: 50px;
+  width: 450px;
+
+}
+#text:hover{
+  background-color: orange;
+}
+#ferme{
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 5px;
+  margin: 10px;
 }
