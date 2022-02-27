@@ -9,7 +9,7 @@
   }
   
   .container {
-    width: 100%;
+    width: 40%;
     height: 100vh;
     color: #eee;
     display: flex;
@@ -18,14 +18,14 @@
   }
   
   .calendar{
-    width:500px;
+    width:400px;
     height: 550px;
     border: solid orange;
     border-radius: 10px;
   }
   .month {
-    width: 498px;
-    height: 100px;
+    width: 100%max-content;
+    height: 150px;
     background-color: orange;
     display: flex;
     justify-content: space-between;
@@ -73,13 +73,12 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0.2rem;
   }
   .days div {
     font-size: 1.4rem;
     margin: 0.3rem;
-    width: calc(40.2rem / 7);
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,10 +93,7 @@
     cursor: pointer;
   }
   
-  .prev-date,
-  .next-date {
-    opacity: 0.5;
-  }
+  
 
   .today {
     background-color: orange;
@@ -128,7 +124,7 @@
 
 #evenment {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 #text{
   border: transparent;
@@ -145,4 +141,18 @@
   background-color: orange;
   border-radius: 5px;
   margin: 10px;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  
+
+}
+
+#button1{
+  background-color: orange;
+  border-radius: 20px;
+  height: 20px;
+  width: 100px;
 }

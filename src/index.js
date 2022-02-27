@@ -1,9 +1,33 @@
 
 let ora = document.getElementById("ora")
-let evenement = document.getElementById("evenment")
 let dayh= document.getElementsByClassName("days")
 let input = document.getElementById("input")
 let date = new Date();
+
+let body = document.getElementById("body")
+
+
+
+
+
+
+
+
+
+class calendier{
+  constructor(jour,mois,samain,anne){
+    this.jour = jour ="h"
+    this.mois =mois
+    this.samain =samain
+    this.anne =anne
+
+
+
+  }
+
+
+
+} 
 
 const renderCalendar = () => {
   date.setDate(1);
@@ -92,6 +116,8 @@ buttonsave.addEventListener("click",save)
 //
 
 function save() {
+  let evenement = document.createElement("div")
+  body.appendChild(evenement)
 
 let diveven = document.createElement("div")
 let but = document.createElement("button")
@@ -103,21 +129,23 @@ diveven.style.borderRadius = "10px"
 but.style.height ="50px"
 but.style.width ="50px"
 but.style.background ="black"
-let indate = document.getElementById("date")
 
 evenement.appendChild(diveven)
 diveven.appendChild(but)
+let dato= document.getElementById("dato")
 localStorage.setItem("text",text.value)
-diveven.innerHTML = localStorage.getItem("text")+"<br>"+localStorage.getItem("date")+"<button id=ferme>x</button>"
-let ferme = document.getElementById("ferme")
-ferme.addEventListener ("click" ,fermi)
-function fermi() {
-  diveven.innerHTML =""
-  diveven.style.border ="solid 0px"
+localStorage.setItem("dato",dato.value)
+
+diveven.innerHTML = localStorage.getItem("text")+"<br>"+localStorage.getItem("dato")
+let button1 = document.getElementById("button1")
+
+button1.addEventListener("click",fermeven)
+
+function fermeven() {
+    evenement.innerHTML=""
+
 }
 
-
 }
-
 
 

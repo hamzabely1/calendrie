@@ -16,9 +16,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="tutto">
-    <div class="container">
+  <body id="body">
+    <div class="container ">
       
       <div class="calendar">
         <div class="month">
@@ -27,7 +26,7 @@
           <div class="date">
             <h1></h1>
             <p></p>
-            <p id="ora"></p>
+            <p id="ora"></p> 
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
@@ -56,26 +55,30 @@
 
 
   </div>
-    <div  id="evenment">
+  <div class="flex">
+
+  <button   id="button1">remove evenments</button>
+  </div>
+  
 
 
 
-      
-    </div >
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button"  data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <input type="text" id="text">
+                        <p>choisi la date sur la quelle tu veux faire l'evenment</p>
+
           </div> 
-          <input id="date" type="date">
+          <input id="dato" type="date">
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button id="buttonsave"  type="button" class="btn btn-warning" >Save </button>
+            <button type="button" class="btn btn-secondary" >Close</button>
+            <button id="buttonsave" type="button" class="btn btn-warning"data-bs-dismiss="modal" >Save </button>
           </div>
         </div>
       </div>
@@ -83,7 +86,7 @@
 
 
      
-    </div>
+    
 
 
    
